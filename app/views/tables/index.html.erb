@@ -1,0 +1,26 @@
+<h1>Listing tables</h1>
+
+<table>
+  <thead>
+    
+    <tr>
+      <th>Table</th>
+      <th>Created By</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <% @tables.each do |table| %>
+      <tr>       
+        <td><%=table.id%></td>
+        <td><%=User.find_by_id(table.user_id).nickname%></td>
+        <td><%= link_to 'Show', table %></td>
+        <td><%= link_to 'Join This Table', "/"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

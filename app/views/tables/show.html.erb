@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Table:</strong>
+  <%= @table.id %>
+</p>
+<p>
+  Host:<%=User.find_by_id(@table.user_id).nickname%></p>
+<div><%= link_to 'Join This Table', "/"%></div>
+  <%= link_to 'Back', tables_path %>

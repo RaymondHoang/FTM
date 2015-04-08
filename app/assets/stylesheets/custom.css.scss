@@ -1,0 +1,132 @@
+@import "bootstrap";
+/* universal */
+html {
+  overflow-y: scroll;
+}
+.image { 
+   position: relative;
+}
+body {
+  background: url('wwbg.jpg') no-repeat center bottom fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  padding-top: 60px;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+span .comment
+{
+  text-decoration: line-through;
+}
+.center {
+  text-align: center;
+}
+
+div.hero-unit a {
+  color:#fff;
+}
+table {
+  background-color:#fff;
+}
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+h1 {
+  font-family: Calluna Sans, Arial, sans-serif;
+  color: #fff;
+  background: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background: -moz-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  padding: 2rem;
+  margin-top: 0;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+h2{
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  top: 200px; 
+  left: 0; 
+  width: 100%; 
+}
+h3{
+  font-size: 2.0em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  top: 200px; 
+  left: 0; 
+  width: 100%; 
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  color: yellow;
+}
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+}
+footer a {
+  color: black;
+}
+footer a:hover {
+  color: #fff;
+}
+footer small {
+  float: left;
+}
+footer ul {
+  float: right;
+  list-style: none;
+}
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: left;
+}
+

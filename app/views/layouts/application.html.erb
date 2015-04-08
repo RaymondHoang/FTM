@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FindTheMafia | <%=yield(:title)%></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+<body>
+<header class="navbar navbar-fixed-top navbar-inverse">
+<div class="navbar-inner">
+<div class="container">
+  <%= link_to "FindTheMafia", '/', id: "logo" %>
+<nav>
+<ul class="nav navbar-nav pull-right">
+<li><%= link_to "Home", '/' %></li>
+  <li><%= link_to "How To Play", '/howtoplay' %></li><p class="navbar-text pull-right">
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  <%= link_to current_user.email, current_user, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+  
+ 
+</ul>
+  
+</nav>  
+</div>
+</div>
+      <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+</header>
+<div class="container">
+<%= yield %>
+    <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+<footer class="footer">
+<nav>
+<ul>
+<li><%= link_to "About", 'about' %></li>
+<li><%= link_to "Contact", 'contact' %></li>
+</ul>
+</nav>
+</footer>
+</div>
+  
+</body>
+
+</body>
+</html>

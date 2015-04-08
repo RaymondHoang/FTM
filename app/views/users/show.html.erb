@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @user.nickname %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @user.status %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+
+<p>
+  <strong>Exp:</strong>
+  <%= @user.exp %>
+</p>
+
+<p>
+  <strong>Exptolvl:</strong>
+  <%= @user.exptolvl %>
+</p>
+
+<p>
+  <strong>Lvl:</strong>
+  <%= @user.lvl %>
+</p>
+<h2><%=@user.nickname%>'s Friends</h2>
+<ul>
+  <% for friendship in @user.friendships %>
+  <li>
+    <%= h link_to friendship.friend.nickname, friendship.friend %>
+    (<%= link_to "remove", friendship, :method => :delete %>)
+  </li>
+  <% end %>
+  <h2>Users Who Have Befriended <%=@user.nickname%></h2>
+<ul>
+  <% for user in @user.inverse_friends %>
+  <li><%= h link_to user.nickname, user %></li>
+  <% end %>
+</ul>
+<%= link_to "Find Friends", users_path %> |
+<%= link_to 'Edit', edit_user_registration_path %> |
+<%= link_to 'Back', users_path %>
